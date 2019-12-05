@@ -1,0 +1,39 @@
+.container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center
+}
+
+.accordion {
+  border: 1px solid black;
+  cursor: pointer;
+  padding: 18px;
+  text-align: left;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  outline: 0;
+
+  span {
+      float: right;
+  }
+}
+
+.open {
+  display: block;
+  height: auto;
+  border-radius: 20px;
+  border: 0.5px solid rgb(199, 197, 197);
+  width: 200px;
+}
+
+p {
+  padding: 18px;
+  font-size: 18px;
+}
+
+.close {
+  display: none;
+}

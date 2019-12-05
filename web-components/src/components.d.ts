@@ -11,6 +11,12 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 export namespace Components {
   interface HelloWorld {}
+  interface TagAccordion {
+    'color': string;
+    'description': string;
+    'label': string;
+    'width': string;
+  }
 }
 
 declare global {
@@ -21,16 +27,31 @@ declare global {
     prototype: HTMLHelloWorldElement;
     new (): HTMLHelloWorldElement;
   };
+
+  interface HTMLTagAccordionElement extends Components.TagAccordion, HTMLStencilElement {}
+  var HTMLTagAccordionElement: {
+    prototype: HTMLTagAccordionElement;
+    new (): HTMLTagAccordionElement;
+  };
   interface HTMLElementTagNameMap {
     'hello-world': HTMLHelloWorldElement;
+    'tag-accordion': HTMLTagAccordionElement;
   }
 }
 
 declare namespace LocalJSX {
   interface HelloWorld {}
+  interface TagAccordion {
+    'color'?: string;
+    'description'?: string;
+    'label'?: string;
+    'onOnToggle'?: (event: CustomEvent<any>) => void;
+    'width'?: string;
+  }
 
   interface IntrinsicElements {
     'hello-world': HelloWorld;
+    'tag-accordion': TagAccordion;
   }
 }
 
@@ -41,6 +62,7 @@ declare module "@stencil/core" {
   export namespace JSX {
     interface IntrinsicElements {
       'hello-world': LocalJSX.HelloWorld & JSXBase.HTMLAttributes<HTMLHelloWorldElement>;
+      'tag-accordion': LocalJSX.TagAccordion & JSXBase.HTMLAttributes<HTMLTagAccordionElement>;
     }
   }
 }
