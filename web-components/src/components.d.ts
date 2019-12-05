@@ -6,12 +6,14 @@
  */
 
 
+
+tWowQaujCKiHv4U9SipAYmxHabk=
 import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 
 export namespace Components {
   interface HelloWorld {}
-  interface TagAccordion {
+tWowQaujCKiHv4U9SipAYmxHabk=  interface TagAccordion {
     'color': string;
     'description': string;
     'label': string;
@@ -45,7 +47,7 @@ declare namespace LocalJSX {
     'color'?: string;
     'description'?: string;
     'label'?: string;
-    'onOnToggle'?: (event: CustomEvent<any>) => void;
+    'onToogle'?: (event: CustomEvent<any>) => void;
     'width'?: string;
   }
 
