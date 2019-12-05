@@ -9,7 +9,7 @@ describe('hello-world', () => {
     expect(element).toHaveClass('hydrated');
   });
 
-  it('renders changes to the name data', async () => {
+  it('deve renderizar component com texto pré-definido', async () => {
     const page = await newE2EPage();
 
     await page.setContent('<hello-world></hello-world>');
