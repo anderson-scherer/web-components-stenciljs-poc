@@ -27,14 +27,14 @@ export default {
             id: 1,
             width: '800px',
             color: 'purple',
-            label: 'Lorem Ipsum',
+            label: 'Recebendo valores como props - Lorem Ipsum - VUE',
             description: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...'
           },
           {
             id: 2,
             width: '800px',
             color: 'aquamarine',
-            label: 'Lorem Ipsum - 1',
+            label: 'Recebendo valores como props - Lorem Ipsum - VUE',
             description: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...'
           }
         ],
