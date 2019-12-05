@@ -8,9 +8,9 @@ import { Component, State, EventEmitter, Event, Prop, h } from '@stencil/core';
 
 export class MyComponent {
 
-  @State() toggle: boolean = false;
+  @State() isVisible: boolean = false;
 
-  @Event() onToggle: EventEmitter;
+  @Event() toogle: EventEmitter;
 
   @Prop() label: string;
 
@@ -21,27 +21,27 @@ export class MyComponent {
   @Prop() color: string;
 
   toggleComponent() {
-    this.toggle = !this.toggle;
-    this.onToggle.emit({ visible: this.toggle });
+    this.isVisible = !this.isVisible;
+    this.toogle.emit({ visible: this.isVisible });
   }
 
   render() {
 
     return (
       <div>
-      <button class="accordion"
-      style={{
-        width: this.width,
-        backgroundColor: this.color,
-      }}
-      onClick={() => this.toggleComponent()}>
-      {this.label}
-      {this.toggle ? <span>&#9650;</span> : <span>&#9660;</span>}
-      </button>
-      <div class={`content-box ${this.toggle ? 'open' : 'close'}`}
-      style={{width: this.width}}>
-      <p>{this.description}</p>
-      </div>
+        <button class="accordion"
+          style={{
+            width: this.width,
+            backgroundColor: this.color,
+          }}
+          onClick={() => this.toggleComponent()}>
+          {this.label}
+          {this.isVisible ? <span>&#9650;</span> : <span>&#9660;</span>}
+        </button>
+        <div class={`content-box ${this.isVisible ? 'open' : 'close'}`}
+          style={{ width: this.width }}>
+          <p>{this.description}</p>
+        </div>
       </div>
     )
   }
